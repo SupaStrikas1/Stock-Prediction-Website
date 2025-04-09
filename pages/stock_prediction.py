@@ -11,46 +11,6 @@ import openai
 from google import genai
 
 
-# def get_ai_stock_analysis(stock_symbol):
-#     """
-#     Generate AI analysis of stock trends based on historical data and news
-#     """
-#     # Check if OpenAI API key is set
-#     api_key = st.secrets.get("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", None)
-#     if api_key is None:
-#         return "Please set up your OpenAI API key in Streamlit secrets to use the AI analysis feature."
-    
-#     try:
-#         client = openai.OpenAI(api_key=api_key)
-        
-#         # Construct prompt
-#         prompt = f"""
-#         You are a stock market analyst expert. Analyze the current trend for {stock_symbol} stock based on the current affairs:
-        
-#         Please provide:
-#         1. A brief analysis of the current trend
-#         2. Key factors that might be affecting the stock price
-#         3. A short-term outlook (1-7 days)
-        
-#         Keep your response concise and actionable.
-#         """
-        
-#         # Get response from OpenAI
-#         response = client.chat.completions.create(
-#             model="gpt-3.5-turbo",
-#             messages=[
-#                 {"role": "system", "content": "You are a financial expert specializing in stock market analysis."},
-#                 {"role": "user", "content": prompt}
-#             ],
-#             max_tokens=500,
-#             temperature=0.7
-#         )
-        
-#         return response.choices[0].message.content
-        
-#     except Exception as e:
-#         return f"Error generating AI analysis: {str(e)}"
-
 def stock_prediction_page():
     st.title("📈 Stock Market Prediction with LSTM")
     
