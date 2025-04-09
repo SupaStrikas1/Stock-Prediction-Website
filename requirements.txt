@@ -7,3 +7,4 @@ plotly
 tensorflow
 scikit-learn
 openai
+google
